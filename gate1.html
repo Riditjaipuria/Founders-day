@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gate 1 Entry</title>
+  <style>
+    body { font-family: Arial; text-align: center; background: #f0f0f0; padding-top: 40px; }
+    .tick { font-size: 90px; color: green; }
+    .text { font-size: 20px; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <div class="tick">✅</div>
+  <div class="text">Permission Granted</div>
+  <div class="text">Gate: 1</div>
+  <div class="text" id="timeDisplay"></div>
+  <input type="file" accept="image/*" capture="environment" onchange="startTimer(this)">
+
+  <script>
+    document.getElementById("timeDisplay").textContent = "Time: " + new Date().toLocaleString();
+    function startTimer(input) {
+      if (!input.files || !input.files[0]) return;
+      setTimeout(() => { window.location.href = "about:blank"; }, 10000);
+    }
+  </script>
+</body>
+</html>

@@ -1,27 +1,231 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Gate 1 Entry</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Hilite Enterprises — Powering the Future with Solar</title>
+  <meta name="description" content="Hilite Enterprises — Solar street lights, solar trees, panels and installations since 1995. Based in Lucknow, Uttar Pradesh.">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body { font-family: Arial; text-align: center; background: #f0f0f0; padding-top: 40px; }
-    .tick { font-size: 90px; color: green; }
-    .text { font-size: 20px; margin-top: 10px; }
+    :root{
+      --deep-blue:#012e4a;
+      --solar-yellow:#ffbf00;
+      --muted:#f5f7fa;
+      --card:#ffffff;
+      --accent:#0b6e4f;
+      --maxw:1100px;
+    }
+    *{box-sizing:border-box}
+    body{font-family:Inter, Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; color:#0b2540; background:linear-gradient(180deg,var(--muted),#fff 60%)}
+    .container{max-width:var(--maxw);margin:0 auto;padding:24px}
+    header{background:var(--card);border-radius:10px;padding:18px;margin-top:18px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 6px 18px rgba(2,10,20,0.06)}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--solar-yellow),#ffd966);display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--deep-blue);font-size:20px}
+    .brand h1{margin:0;font-size:20px}
+    nav a{margin-left:18px;color:var(--deep-blue);text-decoration:none;font-weight:600}
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:24px;align-items:center;margin:26px 0}
+    .hero-card{background:linear-gradient(180deg,#fff, #fbfdff);padding:28px;border-radius:12px;box-shadow:0 10px 30px rgba(2,10,20,0.06)}
+    .kpis{display:flex;gap:12px;margin-top:18px}
+    .kpi{background:var(--muted);padding:12px;border-radius:8px;flex:1;text-align:center}
+    .cta{display:flex;gap:12px;margin-top:18px}
+    .btn{padding:12px 18px;border-radius:8px;border:0;cursor:pointer;font-weight:700}
+    .btn-primary{background:var(--deep-blue);color:#fff}
+    .btn-ghost{background:transparent;border:2px solid var(--deep-blue);color:var(--deep-blue)}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 8px 24px rgba(2,10,20,0.04)}
+    .products{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
+    .product{padding:14px;border-radius:10px;background:linear-gradient(180deg,#fff,#fcfffb);min-height:140px}
+    .projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px}
+    .project{border-radius:10px;overflow:hidden}
+    footer{margin:36px 0;padding:18px;text-align:center;color:#334155}
+    .contact-grid{display:grid;grid-template-columns:1fr 360px;gap:18px}
+    .small{font-size:13px;color:#334155}
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;}
+      .products,.projects-grid{grid-template-columns:1fr}
+      .contact-grid{grid-template-columns:1fr}
+    }
+    /* subtle badge */
+    .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(1,46,74,0.06);font-weight:700;color:var(--deep-blue)}
   </style>
 </head>
 <body>
-  <div class="tick">✅</div>
-  <div class="text">Permission Granted</div>
-  <div class="text">Gate: 1</div>
-  <div class="text" id="timeDisplay"></div>
-  <input type="file" accept="image/*" capture="environment" onchange="startTimer(this)">
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden>HE</div>
+        <div>
+          <h1>Hilite Enterprises</h1>
+          <div class="small">Powering the future with solar since 1995 — Lucknow, Uttar Pradesh</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header><section id="home" class="hero">
+  <div class="hero-card">
+    <h2 style="margin:0 0 8px 0">Hilite Enterprises — Powering the Future with Solar</h2>
+    <p style="margin:0;color:#334155">30+ years of experience designing, installing and maintaining solar street lights, solar trees and complete solar systems for government &amp; infrastructure projects.</p>
 
-  <script>
-    document.getElementById("timeDisplay").textContent = "Time: " + new Date().toLocaleString();
-    function startTimer(input) {
-      if (!input.files || !input.files[0]) return;
-      setTimeout(() => { window.location.href = "about:blank"; }, 10000);
+    <div class="kpis">
+      <div class="kpi"><div style="font-weight:800;font-size:18px">30+</div><div class="small">Years in Solar</div></div>
+      <div class="kpi"><div style="font-weight:800;font-size:18px">1000+</div><div class="small">Lights & Installations</div></div>
+      <div class="kpi"><div style="font-weight:800;font-size:18px">UP-wide</div><div class="small">Projects across Uttar Pradesh</div></div>
+    </div>
+
+    <div class="cta">
+      <button class="btn btn-primary" onclick="openContact()">Get a Free Consultation</button>
+      <button class="btn btn-ghost" onclick="window.location='#projects'">See Projects</button>
+    </div>
+
+    <div style="margin-top:18px" class="small">Quick links: <span class="badge">Solar Street Lights</span> <span class="badge">Solar Trees</span> <span class="badge">Government Projects</span></div>
+  </div>
+
+  <aside>
+    <div class="card">
+      <!-- Replace this placeholder image with a real project photo. -->
+      <img src="https://via.placeholder.com/400x300?text=Solar+Street+Lights" alt="Hilite project" style="width:100%;border-radius:8px;margin-bottom:12px">
+      <h3 style="margin:0 0 8px 0">Trusted by local authorities &amp; industries</h3>
+      <p class="small">We combine product design, supply and installation with long-term maintenance contracts.</p>
+      <div style="margin-top:12px;display:flex;gap:8px">
+        <button class="btn btn-primary" onclick="openWhatsApp()">Contact on WhatsApp</button>
+        <a class="btn btn-ghost" href="#contact">Get Quote</a>
+      </div>
+    </div>
+  </aside>
+</section>
+
+<section id="products" style="margin-top:8px">
+  <div class="card">
+    <h3 style="margin-top:0">Products &amp; Services</h3>
+    <div class="products">
+      <div class="product">
+        <h4>Solar Street Lights</h4>
+        <p class="small">Full-spectrum models for urban roads, highways and rural pathways. Robust, vandal-resistant and IP65 rated.</p>
+        <ul class="small">
+          <li>Integrated battery solutions</li>
+          <li>Smart light sensors and remote monitoring</li>
+          <li>Custom height and lumens options</li>
+        </ul>
+      </div>
+
+      <div class="product">
+        <h4>Solar Trees</h4>
+        <p class="small">Aesthetic, space-saving solar structures ideal for parks, campuses and public areas.</p>
+        <ul class="small"><li>Modular design</li><li>Lighting + charging points</li><li>Easy installation</li></ul>
+      </div>
+
+      <div class="product">
+        <h4>Solar Panels &amp; Systems</h4>
+        <p class="small">Residential, commercial and industrial solar systems with end-to-end delivery.</p>
+        <ul class="small"><li>System design &amp; simulation</li><li>Installation &amp; commissioning</li><li>O&M and AMC contracts</li></ul>
+      </div>
+    </div>
+
+    <div style="margin-top:14px" class="small">Also: Electrical installations, government tenders &amp; infrastructure projects. Contact us for customised solutions.</div>
+  </div>
+</section>
+
+<section id="projects" style="margin-top:18px">
+  <h3 style="margin-bottom:8px">Selected Projects</h3>
+  <div class="projects-grid">
+    <div class="project card"><img src="https://via.placeholder.com/400x220?text=Project+1" alt="Project 1" style="width:100%"><div style="padding:12px"><strong>Rural Street Lighting — 100 units</strong><div class="small">Jan 2024 — Uttar Pradesh</div></div></div>
+    <div class="project card"><img src="https://via.placeholder.com/400x220?text=Project+2" alt="Project 2" style="width:100%"><div style="padding:12px"><strong>Public Park — 5 Solar Trees</strong><div class="small">Aug 2023 — Lucknow</div></div></div>
+    <div class="project card"><img src="https://via.placeholder.com/400x220?text=Project+3" alt="Project 3" style="width:100%"><div style="padding:12px"><strong>50 kW Rooftop — Industrial</strong><div class="small">Mar 2022 — Kanpur</div></div></div>
+  </div>
+</section>
+
+<section id="contact" style="margin-top:18px">
+  <div class="card contact-grid">
+    <div>
+      <h3 style="margin-top:0">Get a Quote / Contact Us</h3>
+      <p class="small">Send us project details and we will respond within 24–48 hours.</p>
+      <form id="contactForm" onsubmit="submitForm(event)">
+        <div style="display:flex;gap:8px;margin-bottom:8px">
+          <input type="text" id="name" placeholder="Your name" required style="flex:1;padding:10px;border-radius:8px;border:1px solid #e6eef8">
+          <input type="tel" id="phone" placeholder="Phone" required style="width:140px;padding:10px;border-radius:8px;border:1px solid #e6eef8">
+        </div>
+        <input type="email" id="email" placeholder="Email" style="width:100%;padding:10px;border-radius:8px;border:1px solid #e6eef8;margin-bottom:8px">
+        <textarea id="message" rows="4" placeholder="Project details (site, size, expected timeline)" style="width:100%;padding:10px;border-radius:8px;border:1px solid #e6eef8;margin-bottom:8px"></textarea>
+        <div style="display:flex;gap:8px">
+          <button type="submit" class="btn btn-primary">Send Message</button>
+          <button type="button" class="btn btn-ghost" onclick="openWhatsApp()">Contact on WhatsApp</button>
+        </div>
+      </form>
+
+      <div style="margin-top:12px;font-size:13px">
+        <strong>Office:</strong> Lucknow, Uttar Pradesh<br>
+        <strong>Phone:</strong> <span id="phoneNumber">+91 XXXXXXXXXX</span><br>
+        <strong>Email:</strong> <span id="emailAddr">contact@hilite.com</span>
+      </div>
+    </div>
+
+    <aside class="card" style="align-self:start">
+      <h4 style="margin-top:0">Why choose Hilite?</h4>
+      <ul class="small">
+        <li>30 years of solar experience</li>
+        <li>End-to-end delivery: design → install → maintain</li>
+        <li>Strong experience with government tenders</li>
+        <li>Custom products: street lights &amp; solar trees</li>
+      </ul>
+      <div style="margin-top:12px">
+        <strong class="small">Follow us:</strong>
+        <div style="margin-top:8px;display:flex;gap:8px">
+          <a href="#" class="small">LinkedIn</a>
+          <a href="#" class="small">Instagram</a>
+          <a href="#" class="small">YouTube</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<footer>
+  <div class="small">© <span id="year"></span> Hilite Enterprises — Lucknow. All rights reserved.</div>
+</footer>
+
+  </div>  <script>
+    // Update year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Replace these with real contact details before going live
+    const PHONE = '+91 XXXXXXXXXX';
+    const EMAIL = 'contact@hilite.com';
+    document.getElementById('phoneNumber').textContent = PHONE;
+    document.getElementById('emailAddr').textContent = EMAIL;
+
+    function submitForm(e){
+      e.preventDefault();
+      const n = document.getElementById('name').value.trim();
+      const p = document.getElementById('phone').value.trim();
+      const em = document.getElementById('email').value.trim();
+      const msg = document.getElementById('message').value.trim();
+      // Open user's email client with the message (simple fallback)
+      const subject = encodeURIComponent('Website enquiry from ' + n);
+      const body = encodeURIComponent('Name: '+n+"\nPhone: "+p+"\nEmail: "+em+"\n\nMessage:\n"+msg);
+      window.location.href = 'mailto:'+EMAIL+'?subject='+subject+'&body='+body;
     }
-  </script>
-</body>
+
+    function openWhatsApp(){
+      const phone = PHONE.replace(/\s+/g,'');
+      const text = encodeURIComponent('Hello Hilite Enterprises — I have a project enquiry.');
+      // WhatsApp link (user should replace phone with real number)
+      window.open('https://wa.me/'+phone.replace('+','')+'?text='+text, '_blank');
+    }
+
+    function openContact(){
+      document.location.hash = '#contact';
+      setTimeout(()=>{ document.getElementById('name').focus(); },300);
+    }
+  </script>  <!--
+    HOW TO USE:
+    1) Replace placeholder phone and email in the SCRIPT (PHONE and EMAIL constants) with real contact details.
+    2) Swap placeholder images (via.placeholder) with your real project images in the <img> tags.
+    3) To host: upload this file as index.html to any web host, or create a GitHub repo and enable GitHub Pages.
+    4) Need help publishing? Ask me and I will provide step-by-step GitHub Pages hosting instructions.
+  --></body>
 </html>
